@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A49CD55F19F014D7004CAAAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49CD55E19F014D7004CAAAC /* Foundation.framework */; };
+		A49CD56119F014D7004CAAAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49CD56019F014D7004CAAAC /* CoreGraphics.framework */; };
+		A49CD56319F014D7004CAAAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49CD56219F014D7004CAAAC /* UIKit.framework */; };
+		A49CD56919F014D7004CAAAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A49CD56719F014D7004CAAAC /* InfoPlist.strings */; };
+		A49CD56B19F014D7004CAAAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD56A19F014D7004CAAAC /* main.m */; };
+		A49CD56F19F014D7004CAAAC /* ABCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD56E19F014D7004CAAAC /* ABCAppDelegate.m */; };
+		A49CD57119F014D7004CAAAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49CD57019F014D7004CAAAC /* Images.xcassets */; };
+		A49CD57819F014D7004CAAAC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49CD57719F014D7004CAAAC /* XCTest.framework */; };
+		A49CD57919F014D7004CAAAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49CD55E19F014D7004CAAAC /* Foundation.framework */; };
+		A49CD57A19F014D7004CAAAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49CD56219F014D7004CAAAC /* UIKit.framework */; };
+		A49CD58219F014D7004CAAAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A49CD58019F014D7004CAAAC /* InfoPlist.strings */; };
+		A49CD58419F014D7004CAAAC /* AbcBankDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD58319F014D7004CAAAC /* AbcBankDemoTests.m */; };
+		A49CD59019F01507004CAAAC /* ABCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD58E19F01507004CAAAC /* ABCLoginViewController.m */; };
+		A49CD59119F01507004CAAAC /* ABCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49CD58F19F01507004CAAAC /* ABCLoginViewController.xib */; };
+		A49CD59919F0562B004CAAAC /* ABCSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD59819F0562B004CAAAC /* ABCSettingsTableViewController.m */; };
+		A49CD59D19F058D7004CAAAC /* ABCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD59B19F058D7004CAAAC /* ABCWebViewController.m */; };
+		A49CD59E19F058D7004CAAAC /* ABCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49CD59C19F058D7004CAAAC /* ABCWebViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A49CD57B19F014D7004CAAAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A49CD55319F014D7004CAAAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A49CD55A19F014D7004CAAAC;
+			remoteInfo = AbcBankDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A49CD55B19F014D7004CAAAC /* AbcBankDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbcBankDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A49CD55E19F014D7004CAAAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A49CD56019F014D7004CAAAC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A49CD56219F014D7004CAAAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A49CD56619F014D7004CAAAC /* AbcBankDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AbcBankDemo-Info.plist"; sourceTree = "<group>"; };
+		A49CD56819F014D7004CAAAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A49CD56A19F014D7004CAAAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A49CD56C19F014D7004CAAAC /* AbcBankDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AbcBankDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A49CD56D19F014D7004CAAAC /* ABCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABCAppDelegate.h; sourceTree = "<group>"; };
+		A49CD56E19F014D7004CAAAC /* ABCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABCAppDelegate.m; sourceTree = "<group>"; };
+		A49CD57019F014D7004CAAAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A49CD57619F014D7004CAAAC /* AbcBankDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbcBankDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A49CD57719F014D7004CAAAC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A49CD57F19F014D7004CAAAC /* AbcBankDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AbcBankDemoTests-Info.plist"; sourceTree = "<group>"; };
+		A49CD58119F014D7004CAAAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A49CD58319F014D7004CAAAC /* AbcBankDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbcBankDemoTests.m; sourceTree = "<group>"; };
+		A49CD58D19F01507004CAAAC /* ABCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCLoginViewController.h; sourceTree = "<group>"; };
+		A49CD58E19F01507004CAAAC /* ABCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCLoginViewController.m; sourceTree = "<group>"; };
+		A49CD58F19F01507004CAAAC /* ABCLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABCLoginViewController.xib; sourceTree = "<group>"; };
+		A49CD59719F0562B004CAAAC /* ABCSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCSettingsTableViewController.h; sourceTree = "<group>"; };
+		A49CD59819F0562B004CAAAC /* ABCSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCSettingsTableViewController.m; sourceTree = "<group>"; };
+		A49CD59A19F058D7004CAAAC /* ABCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABCWebViewController.h; path = ../ABCWebViewController.h; sourceTree = "<group>"; };
+		A49CD59B19F058D7004CAAAC /* ABCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABCWebViewController.m; path = ../ABCWebViewController.m; sourceTree = "<group>"; };
+		A49CD59C19F058D7004CAAAC /* ABCWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ABCWebViewController.xib; path = ../ABCWebViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A49CD55819F014D7004CAAAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CD56119F014D7004CAAAC /* CoreGraphics.framework in Frameworks */,
+				A49CD56319F014D7004CAAAC /* UIKit.framework in Frameworks */,
+				A49CD55F19F014D7004CAAAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49CD57319F014D7004CAAAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CD57819F014D7004CAAAC /* XCTest.framework in Frameworks */,
+				A49CD57A19F014D7004CAAAC /* UIKit.framework in Frameworks */,
+				A49CD57919F014D7004CAAAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A49CD55219F014D7004CAAAC = {
+			isa = PBXGroup;
+			children = (
+				A49CD56419F014D7004CAAAC /* AbcBankDemo */,
+				A49CD57D19F014D7004CAAAC /* AbcBankDemoTests */,
+				A49CD55D19F014D7004CAAAC /* Frameworks */,
+				A49CD55C19F014D7004CAAAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A49CD55C19F014D7004CAAAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A49CD55B19F014D7004CAAAC /* AbcBankDemo.app */,
+				A49CD57619F014D7004CAAAC /* AbcBankDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A49CD55D19F014D7004CAAAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A49CD55E19F014D7004CAAAC /* Foundation.framework */,
+				A49CD56019F014D7004CAAAC /* CoreGraphics.framework */,
+				A49CD56219F014D7004CAAAC /* UIKit.framework */,
+				A49CD57719F014D7004CAAAC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A49CD56419F014D7004CAAAC /* AbcBankDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A49CD59A19F058D7004CAAAC /* ABCWebViewController.h */,
+				A49CD59B19F058D7004CAAAC /* ABCWebViewController.m */,
+				A49CD59C19F058D7004CAAAC /* ABCWebViewController.xib */,
+				A49CD56D19F014D7004CAAAC /* ABCAppDelegate.h */,
+				A49CD56E19F014D7004CAAAC /* ABCAppDelegate.m */,
+				A49CD58D19F01507004CAAAC /* ABCLoginViewController.h */,
+				A49CD58E19F01507004CAAAC /* ABCLoginViewController.m */,
+				A49CD58F19F01507004CAAAC /* ABCLoginViewController.xib */,
+				A49CD59719F0562B004CAAAC /* ABCSettingsTableViewController.h */,
+				A49CD59819F0562B004CAAAC /* ABCSettingsTableViewController.m */,
+				A49CD57019F014D7004CAAAC /* Images.xcassets */,
+				A49CD56519F014D7004CAAAC /* Supporting Files */,
+			);
+			path = AbcBankDemo;
+			sourceTree = "<group>";
+		};
+		A49CD56519F014D7004CAAAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A49CD56619F014D7004CAAAC /* AbcBankDemo-Info.plist */,
+				A49CD56719F014D7004CAAAC /* InfoPlist.strings */,
+				A49CD56A19F014D7004CAAAC /* main.m */,
+				A49CD56C19F014D7004CAAAC /* AbcBankDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A49CD57D19F014D7004CAAAC /* AbcBankDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A49CD58319F014D7004CAAAC /* AbcBankDemoTests.m */,
+				A49CD57E19F014D7004CAAAC /* Supporting Files */,
+			);
+			path = AbcBankDemoTests;
+			sourceTree = "<group>";
+		};
+		A49CD57E19F014D7004CAAAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A49CD57F19F014D7004CAAAC /* AbcBankDemoTests-Info.plist */,
+				A49CD58019F014D7004CAAAC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A49CD55A19F014D7004CAAAC /* AbcBankDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A49CD58719F014D7004CAAAC /* Build configuration list for PBXNativeTarget "AbcBankDemo" */;
+			buildPhases = (
+				A49CD55719F014D7004CAAAC /* Sources */,
+				A49CD55819F014D7004CAAAC /* Frameworks */,
+				A49CD55919F014D7004CAAAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AbcBankDemo;
+			productName = AbcBankDemo;
+			productReference = A49CD55B19F014D7004CAAAC /* AbcBankDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A49CD57519F014D7004CAAAC /* AbcBankDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A49CD58A19F014D7004CAAAC /* Build configuration list for PBXNativeTarget "AbcBankDemoTests" */;
+			buildPhases = (
+				A49CD57219F014D7004CAAAC /* Sources */,
+				A49CD57319F014D7004CAAAC /* Frameworks */,
+				A49CD57419F014D7004CAAAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A49CD57C19F014D7004CAAAC /* PBXTargetDependency */,
+			);
+			name = AbcBankDemoTests;
+			productName = AbcBankDemoTests;
+			productReference = A49CD57619F014D7004CAAAC /* AbcBankDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A49CD55319F014D7004CAAAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ABC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Orasi;
+				TargetAttributes = {
+					A49CD57519F014D7004CAAAC = {
+						TestTargetID = A49CD55A19F014D7004CAAAC;
+					};
+				};
+			};
+			buildConfigurationList = A49CD55619F014D7004CAAAC /* Build configuration list for PBXProject "AbcBankDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A49CD55219F014D7004CAAAC;
+			productRefGroup = A49CD55C19F014D7004CAAAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A49CD55A19F014D7004CAAAC /* AbcBankDemo */,
+				A49CD57519F014D7004CAAAC /* AbcBankDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A49CD55919F014D7004CAAAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CD59119F01507004CAAAC /* ABCLoginViewController.xib in Resources */,
+				A49CD56919F014D7004CAAAC /* InfoPlist.strings in Resources */,
+				A49CD57119F014D7004CAAAC /* Images.xcassets in Resources */,
+				A49CD59E19F058D7004CAAAC /* ABCWebViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49CD57419F014D7004CAAAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CD58219F014D7004CAAAC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A49CD55719F014D7004CAAAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CD56B19F014D7004CAAAC /* main.m in Sources */,
+				A49CD59D19F058D7004CAAAC /* ABCWebViewController.m in Sources */,
+				A49CD56F19F014D7004CAAAC /* ABCAppDelegate.m in Sources */,
+				A49CD59919F0562B004CAAAC /* ABCSettingsTableViewController.m in Sources */,
+				A49CD59019F01507004CAAAC /* ABCLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A49CD57219F014D7004CAAAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CD58419F014D7004CAAAC /* AbcBankDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A49CD57C19F014D7004CAAAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A49CD55A19F014D7004CAAAC /* AbcBankDemo */;
+			targetProxy = A49CD57B19F014D7004CAAAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A49CD56719F014D7004CAAAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A49CD56819F014D7004CAAAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A49CD58019F014D7004CAAAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A49CD58119F014D7004CAAAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A49CD58519F014D7004CAAAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A49CD58619F014D7004CAAAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A49CD58819F014D7004CAAAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AbcBankDemo/AbcBankDemo-Prefix.pch";
+				INFOPLIST_FILE = "AbcBankDemo/AbcBankDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A49CD58919F014D7004CAAAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AbcBankDemo/AbcBankDemo-Prefix.pch";
+				INFOPLIST_FILE = "AbcBankDemo/AbcBankDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A49CD58B19F014D7004CAAAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AbcBankDemo.app/AbcBankDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AbcBankDemo/AbcBankDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AbcBankDemoTests/AbcBankDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A49CD58C19F014D7004CAAAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AbcBankDemo.app/AbcBankDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AbcBankDemo/AbcBankDemo-Prefix.pch";
+				INFOPLIST_FILE = "AbcBankDemoTests/AbcBankDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A49CD55619F014D7004CAAAC /* Build configuration list for PBXProject "AbcBankDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A49CD58519F014D7004CAAAC /* Debug */,
+				A49CD58619F014D7004CAAAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A49CD58719F014D7004CAAAC /* Build configuration list for PBXNativeTarget "AbcBankDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A49CD58819F014D7004CAAAC /* Debug */,
+				A49CD58919F014D7004CAAAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A49CD58A19F014D7004CAAAC /* Build configuration list for PBXNativeTarget "AbcBankDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A49CD58B19F014D7004CAAAC /* Debug */,
+				A49CD58C19F014D7004CAAAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A49CD55319F014D7004CAAAC /* Project object */;
+}
