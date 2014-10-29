@@ -150,7 +150,7 @@
         NSURL *url = [NSURL URLWithString:requestString];
         NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
         NSString *params = [NSString stringWithFormat:@"user[username]=%@&user[password]=%@", self.usernameField.text, self.passwordField.text];
-        NSString *msgLength = [NSString stringWithFormat:@"%d", [params length]];
+        NSString *msgLength = [NSString stringWithFormat:@"%lu", (unsigned long)[params length]];
         [req setHTTPMethod:@"POST"];
         [req setValue:msgLength forHTTPHeaderField:@"Content-Length"];
         [req setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
