@@ -60,7 +60,7 @@
     
     _settings = [[NSMutableArray alloc] init];
     
-    NSArray *backendSettings = @[@"Use Custom Backend", @"Set Backend Server"];
+    NSArray *backendSettings = @[@"Use Custom Backend", @"Set Backend URL"];
     NSDictionary *backendDict = @{@"settings": backendSettings};
     
     [self.settings addObject:backendDict];
@@ -93,7 +93,7 @@
     
 }
 
-// Function to pull the json of the users and add the array to the settings property
+// Method to pull the json of the users and add the array to the settings property
 - (void)getUsers
 {
     NSString *requestURL = [[NSString alloc] initWithFormat:@"%@users.json", self.URL];
@@ -146,13 +146,13 @@
         if (indexPath.row == 0) {
             UITableViewCell *backendCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
             backendCell.selectionStyle = UITableViewCellSelectionStyleNone;
-            backendCell.textLabel.text = @"Use Custom BackenEnd";
+            backendCell.textLabel.text = @"Use Custom Backend";
             backendCell.accessoryView = _backendSwitch;
             [self.backendSwitch addTarget:self action:@selector(customBackend) forControlEvents:UIControlEventValueChanged];
             
             return backendCell;
         } else {
-            self.customURLCell.textLabel.text = @"Set Backend Server URL";
+            self.customURLCell.textLabel.text = @"Set Custom Backend URL";
             return self.customURLCell;
         }
     } else {
@@ -194,7 +194,7 @@
 {
     if (indexPath.section == 0 && indexPath.row == 1) {
         NSLog(@"Touched!");
-        UIAlertView *customURLAlert = [[UIAlertView alloc] initWithTitle:@"Custom URL" message:@"Enter Custom backend URL" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Set", nil];
+        UIAlertView *customURLAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Enter URL for Custom Backend:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Set", nil];
         customURLAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
         UITextField *alertText = [customURLAlert textFieldAtIndex:0];
         alertText.text = self.URL;
@@ -233,7 +233,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if (section == 0) {
-        NSString *message = [[NSString alloc] initWithFormat:@"Current backend URL \n%@", self.URL];
+        NSString *message = [[NSString alloc] initWithFormat:@"Current backend URL: \n%@", self.URL];
         return message;
     } else {
         return @"";
