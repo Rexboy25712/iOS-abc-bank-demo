@@ -146,13 +146,13 @@
         if (indexPath.row == 0) {
             UITableViewCell *backendCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
             backendCell.selectionStyle = UITableViewCellSelectionStyleNone;
-            backendCell.textLabel.text = @"Use Custom BackenEnd";
+            backendCell.textLabel.text = @"Use Custom Backend";
             backendCell.accessoryView = _backendSwitch;
             [self.backendSwitch addTarget:self action:@selector(customBackend) forControlEvents:UIControlEventValueChanged];
             
             return backendCell;
         } else {
-            self.customURLCell.textLabel.text = @"Set Backend Server URL";
+            self.customURLCell.textLabel.text = @"Set Backend URL";
             return self.customURLCell;
         }
     } else {
@@ -233,7 +233,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if (section == 0) {
-        NSString *message = [[NSString alloc] initWithFormat:@"Current backend URL \n%@", self.URL];
+        NSString *message = [[NSString alloc] initWithFormat:@"Current backend URL: \n%@", self.URL];
         return message;
     } else {
         return @"";
