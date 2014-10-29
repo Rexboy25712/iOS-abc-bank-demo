@@ -60,7 +60,7 @@
     
     _settings = [[NSMutableArray alloc] init];
     
-    NSArray *backendSettings = @[@"Use Custom Backend", @"Set Backend Server"];
+    NSArray *backendSettings = @[@"Use Custom Backend", @"Set Backend URL"];
     NSDictionary *backendDict = @{@"settings": backendSettings};
     
     [self.settings addObject:backendDict];
@@ -93,7 +93,7 @@
     
 }
 
-// Function to pull the json of the users and add the array to the settings property
+// Method to pull the json of the users and add the array to the settings property
 - (void)getUsers
 {
     NSString *requestURL = [[NSString alloc] initWithFormat:@"%@users.json", self.URL];
@@ -152,7 +152,7 @@
             
             return backendCell;
         } else {
-            self.customURLCell.textLabel.text = @"Set Backend URL";
+            self.customURLCell.textLabel.text = @"Set Custom Backend URL";
             return self.customURLCell;
         }
     } else {
@@ -194,7 +194,7 @@
 {
     if (indexPath.section == 0 && indexPath.row == 1) {
         NSLog(@"Touched!");
-        UIAlertView *customURLAlert = [[UIAlertView alloc] initWithTitle:@"Custom URL" message:@"Enter Custom backend URL" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Set", nil];
+        UIAlertView *customURLAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Enter URL for Custom Backend:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Set", nil];
         customURLAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
         UITextField *alertText = [customURLAlert textFieldAtIndex:0];
         alertText.text = self.URL;
