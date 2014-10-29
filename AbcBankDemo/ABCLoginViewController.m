@@ -22,7 +22,7 @@
 
 @implementation ABCLoginViewController
 
-// Constructor for login view controller
+// Initializer for login view controller
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -66,7 +66,7 @@
     [super viewWillDisappear:animated];
 }
 
-// Function to dismiss the keyboard when the view is tapped
+// Method to dismiss the keyboard when the view is tapped
 - (void)dismissKeyboard
 {
     [self.view endEditing:YES];
@@ -101,8 +101,7 @@
 // Will switch to the next field whenever the next key on the keyboard is pressed
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if (textField.returnKeyType == UIReturnKeyNext)
-    {
+    if (textField.returnKeyType == UIReturnKeyNext) {
         [self.passwordField becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
@@ -111,7 +110,7 @@
 }
 
 
-// Function to switch to the settings view controller whenever the settings button is pressed
+// Method to switch to the settings view controller whenever the settings button is pressed
 - (void)settings
 {
     [self.navigationController pushViewController:self.settingsVC animated:YES];
@@ -120,14 +119,32 @@
 // When the login button is pressed, first checks to make sure the fields are not blank then makes a connection to the server for the user
 - (IBAction)login:(id)sender
 {
-    
-    if ([self.usernameField.text isEqualToString:@""] || [self.passwordField.text isEqualToString:@""]) {
-        UIAlertView *toast = [[UIAlertView alloc] initWithTitle:nil message:@"Username and/or Password cannot be blank" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
-        [toast show];
-        int duration = 1;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [toast dismissWithClickedButtonIndex:0 animated:YES];
-        });
+    // Check whether one or both of the text fields are empty, if they are then display an alert and set the appropriate text
+    // field as active
+    if ([self.usernameField.text isEqualToString:@""] && [self.passwordField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"Username and Password cannot be blank."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        [self.usernameField becomeFirstResponder];
+    } else if ([self.usernameField.text isEqualToString:@""] && ![self.passwordField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"Username cannot be blank."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        [self.usernameField becomeFirstResponder];
+    } else if ([self.passwordField.text isEqualToString:@""] && ![self.usernameField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"Password cannot be blank."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        [self.passwordField becomeFirstResponder];
     } else {
         NSString *requestString = [self.settingsVC.URL stringByAppendingString:@"login"];
         NSURL *url = [NSURL URLWithString:requestString];
