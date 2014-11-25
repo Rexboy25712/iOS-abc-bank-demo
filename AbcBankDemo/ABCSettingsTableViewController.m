@@ -7,7 +7,7 @@
 //
 
 #import "ABCSettingsTableViewController.h"
-#import "ABCWebViewController.h"
+#import "ABCURLData.h"
 
 @interface ABCSettingsTableViewController ()
 
@@ -32,9 +32,6 @@
         
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         _session = [NSURLSession sessionWithConfiguration:config delegate:nil delegateQueue:nil];
-        
-        ABCWebViewController *webView = [[ABCWebViewController alloc] init];
-        _URL = [webView.URL absoluteString];
         
     }
     return self;
@@ -80,23 +77,14 @@
         self.customURLCell.selectionStyle = UITableViewCellSelectionStyleNone;
         self.customURLCell.userInteractionEnabled = NO;
         self.customURLCell.textLabel.enabled = NO;
-        
-        ABCWebViewController *webVC = [[ABCWebViewController alloc] init];
-        self.URL = [webVC.URL absoluteString];
     }
-}
-
-- (void)setURL:(NSString *)url
-{
-    _URL = url;
-    [self getUsers];
-    
 }
 
 // Method to pull the json of the users and add the array to the settings property
 - (void)getUsers
 {
-    NSString *requestURL = [[NSString alloc] initWithFormat:@"%@users.json", self.URL];
+    NSURL *URL = [[ABCURLData storedURL] URL];
+    NSString *requestURL = [[NSString alloc] initWithFormat:@"%@users.json", URL];
     NSURL *url = [[NSURL alloc] initWithString:requestURL];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -109,13 +97,11 @@
                 [toast dismissWithClickedButtonIndex:0 animated:YES];
             });
             
-            self.URL = @"http://abcbank.orasi.com/";
+            [[ABCURLData storedURL] defaultURL];
             return;
         }
         _json = [[NSMutableArray alloc] initWithArray:[NSJSONSerialization JSONObjectWithData:data options:0 error:nil]];
 
-        NSLog(@"%@", self.json);
-        NSLog(@"%@", response);
         if ([self.settings count] > 1) {
             [self.settings removeObjectAtIndex:1];
         }
@@ -179,8 +165,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSURL *URL = [[ABCURLData storedURL] URL];
         NSDictionary *userID = (NSDictionary *)[self.json objectAtIndex:indexPath.row];
-        NSString *message = [NSString stringWithFormat:@"%@users/%@", self.URL, [userID objectForKey:@"id"]];
+        NSString *message = [NSString stringWithFormat:@"%@users/%@", URL, [userID objectForKey:@"id"]];
         NSURL *url = [[NSURL alloc] initWithString:message];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
         [request setHTTPMethod:@"delete"];
@@ -193,11 +180,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0 && indexPath.row == 1) {
-        NSLog(@"Touched!");
         UIAlertView *customURLAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Enter URL for Custom Backend:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Set", nil];
         customURLAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
         UITextField *alertText = [customURLAlert textFieldAtIndex:0];
-        alertText.text = self.URL;
+        alertText.text = [[[ABCURLData storedURL] URL] absoluteString];
         [customURLAlert show];
     }
 }
@@ -206,8 +192,8 @@
 {
     if (buttonIndex == 1) {
         UITextField *urlField = [alertView textFieldAtIndex:0];
-        self.URL = urlField.text;
-        
+        [ABCURLData storedURL].URL = [NSURL URLWithString:urlField.text];
+        [self getUsers];
     }
 }
 
@@ -233,7 +219,8 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if (section == 0) {
-        NSString *message = [[NSString alloc] initWithFormat:@"Current backend URL: \n%@", self.URL];
+        NSURL *URL = [[ABCURLData storedURL] URL];
+        NSString *message = [[NSString alloc] initWithFormat:@"Current backend URL: \n%@", URL];
         return message;
     } else {
         return @"";

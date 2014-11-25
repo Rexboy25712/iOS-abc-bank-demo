@@ -7,6 +7,7 @@
 //
 
 #import "ABCWebViewController.h"
+#import "ABCURLData.h"
 
 @interface ABCWebViewController ()
 
@@ -31,7 +32,7 @@
         
         navItem.leftBarButtonItems = @[backButton, forwardButton];
         navItem.rightBarButtonItem = logoutButton;
-        _URL = [[NSURL alloc] initWithString:@"http://abcbank.orasi.com/"];
+        _URL = [[ABCURLData storedURL] defaultURL];
     }
     return self;
 }

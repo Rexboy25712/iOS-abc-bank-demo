@@ -9,6 +9,7 @@
 #import "ABCLoginViewController.h"
 #import "ABCSettingsTableViewController.h"
 #import "ABCWebViewController.h"
+#import "ABCURLData.h"
 
 @interface ABCLoginViewController ()
 
@@ -17,6 +18,7 @@
 @property (nonatomic) NSURLSession *session;
 @property (nonatomic) NSURLResponse *response;
 @property (nonatomic) ABCSettingsTableViewController *settingsVC;
+@property (nonatomic) NSURL *URL;
 
 @end
 
@@ -37,6 +39,8 @@
         _session = [NSURLSession sessionWithConfiguration:config delegate:nil delegateQueue:nil];
         
         _settingsVC = [[ABCSettingsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        
+        _URL = [[ABCURLData storedURL] URL];
     }
     return self;
 }
@@ -78,11 +82,8 @@
 // If url is correct then the web view is pushed on the controller.
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"%@", response);
-    NSLog(@"%@", [[response URL] absoluteString]);
     NSString *url = [[response URL] absoluteString];
-    
-    if ([url isEqualToString:[self.webViewController.URL absoluteString]]) {
+    if ([url isEqualToString:[self.URL absoluteString]]) {
         NSLog(@"Login invalid");
         UIAlertView *toast = [[UIAlertView alloc] initWithTitle:nil message:@"Incorrect Password" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
         [toast show];
@@ -122,6 +123,7 @@
     // Check whether one or both of the text fields are empty, if they are then display an alert and set the appropriate text
     // field as active
     if ([self.usernameField.text isEqualToString:@""] && [self.passwordField.text isEqualToString:@""]) {
+        NSLog(@"%@", [[ABCURLData storedURL] URL]);
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                         message:@"Username and Password cannot be blank."
                                                        delegate:self
@@ -146,7 +148,8 @@
         [alert show];
         [self.passwordField becomeFirstResponder];
     } else {
-        NSString *requestString = [self.settingsVC.URL stringByAppendingString:@"login"];
+        NSString *urlSTring = [self.URL absoluteString];
+        NSString *requestString = [urlSTring stringByAppendingString:@"login"];
         NSURL *url = [NSURL URLWithString:requestString];
         NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
         NSString *params = [NSString stringWithFormat:@"user[username]=%@&user[password]=%@", self.usernameField.text, self.passwordField.text];

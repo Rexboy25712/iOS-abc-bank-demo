@@ -24,6 +24,7 @@
 		A49CD59919F0562B004CAAAC /* ABCSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD59819F0562B004CAAAC /* ABCSettingsTableViewController.m */; };
 		A49CD59D19F058D7004CAAAC /* ABCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49CD59B19F058D7004CAAAC /* ABCWebViewController.m */; };
 		A49CD59E19F058D7004CAAAC /* ABCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49CD59C19F058D7004CAAAC /* ABCWebViewController.xib */; };
+		A4E984DD1A1F8C2F0083BE46 /* ABCURLData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E984DC1A1F8C2F0083BE46 /* ABCURLData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		A49CD59A19F058D7004CAAAC /* ABCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABCWebViewController.h; path = ../ABCWebViewController.h; sourceTree = "<group>"; };
 		A49CD59B19F058D7004CAAAC /* ABCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABCWebViewController.m; path = ../ABCWebViewController.m; sourceTree = "<group>"; };
 		A49CD59C19F058D7004CAAAC /* ABCWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ABCWebViewController.xib; path = ../ABCWebViewController.xib; sourceTree = "<group>"; };
+		A4E984DB1A1F8C2F0083BE46 /* ABCURLData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCURLData.h; sourceTree = "<group>"; };
+		A4E984DC1A1F8C2F0083BE46 /* ABCURLData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCURLData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				A49CD58F19F01507004CAAAC /* ABCLoginViewController.xib */,
 				A49CD59719F0562B004CAAAC /* ABCSettingsTableViewController.h */,
 				A49CD59819F0562B004CAAAC /* ABCSettingsTableViewController.m */,
+				A4E984DB1A1F8C2F0083BE46 /* ABCURLData.h */,
+				A4E984DC1A1F8C2F0083BE46 /* ABCURLData.m */,
 				A49CD57019F014D7004CAAAC /* Images.xcassets */,
 				A49CD56519F014D7004CAAAC /* Supporting Files */,
 			);
@@ -213,6 +218,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Orasi;
 				TargetAttributes = {
+					A49CD55A19F014D7004CAAAC = {
+						DevelopmentTeam = LQ54AVFSW9;
+					};
 					A49CD57519F014D7004CAAAC = {
 						TestTargetID = A49CD55A19F014D7004CAAAC;
 					};
@@ -267,6 +275,7 @@
 				A49CD59D19F058D7004CAAAC /* ABCWebViewController.m in Sources */,
 				A49CD56F19F014D7004CAAAC /* ABCAppDelegate.m in Sources */,
 				A49CD59919F0562B004CAAAC /* ABCSettingsTableViewController.m in Sources */,
+				A4E984DD1A1F8C2F0083BE46 /* ABCURLData.m in Sources */,
 				A49CD59019F01507004CAAAC /* ABCLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,10 +393,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AbcBankDemo/AbcBankDemo-Prefix.pch";
 				INFOPLIST_FILE = "AbcBankDemo/AbcBankDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,10 +410,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AbcBankDemo/AbcBankDemo-Prefix.pch";
 				INFOPLIST_FILE = "AbcBankDemo/AbcBankDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

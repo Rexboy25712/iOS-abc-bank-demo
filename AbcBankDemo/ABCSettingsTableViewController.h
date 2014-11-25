@@ -10,6 +10,4 @@
 
 @interface ABCSettingsTableViewController : UITableViewController
 
-@property (nonatomic) NSString *URL;
-
 @end
